@@ -7,7 +7,7 @@ import frc.robot.subsystems.Drivetrain;
 public class RobotContainer {
 
   // Controller (USB port 0)
-  private final XboxController driverController = new XboxController(0);
+  private final XboxController driver = new XboxController(0);
 
   // Subsystem
   private final Drivetrain drive = new Drivetrain();
@@ -18,8 +18,8 @@ public class RobotContainer {
     drive.setDefaultCommand(
       new RunCommand(() ->
         drive.arcadeDrive(
-          -driverController.getLeftY(),  // forward/back
-          driverController.getRightX()   // turning
+          -driver.getLeftY(),  // forward/back
+          driver.getRightX()   // turning
         ),
         drive
       )
