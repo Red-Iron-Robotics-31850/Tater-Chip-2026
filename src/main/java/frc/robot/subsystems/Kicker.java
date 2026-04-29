@@ -38,10 +38,6 @@ public class Kicker extends SubsystemBase {
         return !reverseLimit.get();
     }
 
-    // ===============================
-    // BASIC MOTOR CONTROL
-    // ===============================
-
     public void stop() {
         motor.stopMotor();
     }
@@ -61,10 +57,6 @@ public class Kicker extends SubsystemBase {
             stop();
         }
     }
-
-    // ===============================
-    // SMART ACTIONS
-    // ===============================
 
     /** Kick forward until magnet is detected */
     public void kick() {
@@ -102,10 +94,6 @@ public class Kicker extends SubsystemBase {
         homeCommand(kicker)
     );
     }
-
-    // ===============================
-    // DEBUGGING
-    // ===============================
 
     @Override
     public void periodic() {
